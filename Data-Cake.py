@@ -164,7 +164,6 @@ def data_app():
     except:
         st.write("Please upload Excel file")
     st.sidebar.header("Data Cake")
-    st.sidebar.info("A to Z about Data Analysis")
 
 
 
