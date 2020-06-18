@@ -14,7 +14,7 @@ import seaborn as sns
 def data_app():
     """ Data Processer and Visualizer  """
     st.title("Data Cake")
-    st.subheader("A to Z about Data Analysis")
+    st.subheader("A to Z  Data Analysis")
 
     file = ['./dataset/Ac1',[0,1]]
     def file_selector():
@@ -163,7 +163,7 @@ def data_app():
             st.balloons()
     except:
         st.write("Please upload Excel file")
-    st.sidebar.header("Data Stories")
+    st.sidebar.header("Data Cake")
     st.sidebar.info("A to Z about Data Analysis")
 
 
