@@ -13,7 +13,7 @@ import seaborn as sns
 
 def data_app():
     """ Data Processer and Visualizer  """
-    st.title("Data Stories")
+    st.title("Data Cake")
     st.subheader("A to Z about Data Analysis")
 
     file = ['./dataset/Ac1',[0,1]]
@@ -110,6 +110,7 @@ def data_app():
     if st.checkbox("Contour Plot "):
         st.text("3D Contour Plot")
         all_columns_names = df.columns.tolist()
+
         X = st.selectbox("Select X axis",all_columns_names)
         Y = st.selectbox("Select Y axis",all_columns_names)
         VS = st.selectbox("Select Z axis",all_columns_names)
@@ -169,7 +170,7 @@ def data_app():
 
 
     st.sidebar.info("Built by Veera Ragavan")
-    
+
 
 if __name__ == '__main__':
     data_app()
