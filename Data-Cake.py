@@ -159,7 +159,7 @@ def data_app():
             st.write(cust_plot)
             st.pyplot()
 
-        if st.button("Thanks"):
+        if st.button("Ready to ML !"):
             st.balloons()
     except:
         st.write("Please upload Excel file")
