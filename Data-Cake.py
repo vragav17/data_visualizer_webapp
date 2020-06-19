@@ -36,41 +36,53 @@ def data_app():
         st.info("Please upload Excel file")
 
     # Show Datas
-
-    if st.checkbox("Show Dataset"):
-        number = st.number_input("Number of Rows to View",5,10)
-        st.dataframe(df.head(number))
+    try:
+        if st.checkbox("Show Dataset"):
+            number = st.number_input("Number of Rows to View",5,10)
+            st.dataframe(df.head(number))
+    except Exception as e:
+        st.info("Please upload Excel file")
 
 # Show Columns
-    if st.button("Column Names"):
-        st.write(df.columns)
+    try:
+        if st.button("Column Names"):
+            st.write(df.columns)
+    except Exception as e:
+        st.info("Please upload Excel file")
 
 # Show Shape
-    if st.checkbox("Shape of Dataset"):
-        st.write(df.shape)
+    try:
+        if st.checkbox("Shape of Dataset"):
+            st.write(df.shape)
+    except Exception as e:
+        st.info("Please upload Excel file")
 
 # Select Columns
-    if st.checkbox("Select Columns To Show"):
-        all_columns = df.columns.tolist()
-        selected_columns = st.multiselect("Select",all_columns)
-        new_df = df[selected_columns]
-        st.dataframe(new_df)
+    try:
+        if st.checkbox("Select Columns To Show"):
+            all_columns = df.columns.tolist()
+            selected_columns = st.multiselect("Select",all_columns)
+            new_df = df[selected_columns]
+            st.dataframe(new_df)
+    except Exception as e:
+        st.info("Please upload Excel file")
 
-# Show Values
-    if st.button("Value Counts"):
-        st.text("Value Counts By Target/Class")
-        st.write(df.iloc[:,-1].value_counts())
 
 
 # Show Datatypes
-    if st.button("Data Types"):
-        st.write(df.dtypes)
-
+    try:
+        if st.button("Data Types"):
+            st.write(df.dtypes)
+    except Exception as e:
+        st.info("Please upload Excel file")
 
 
 # Show Summary
-    if st.checkbox("Summary"):
-        st.write(df.describe().T)
+    try:
+        if st.checkbox("Summary"):
+            st.write(df.describe().T)
+    except Exception as e:
+        st.info("Please upload Excel file")
 
 ## Plot and Visualization
 
@@ -112,8 +124,8 @@ def data_app():
         all_columns_names = df.columns.tolist()
 
         X = st.selectbox("Select X axis",all_columns_names)
-        Y = st.selectbox("Select Y axis",all_columns_names)
-        VS = st.selectbox("Select Z axis",all_columns_names)
+        Y = st.selectbox("Select Y axis",all_columns_names,index = 1)
+        VS = st.selectbox("Select Z axis",all_columns_names,index =2)
 
 
         Z_F = df.pivot_table(index=X, columns=Y, values=VS).T.values
@@ -162,7 +174,7 @@ def data_app():
         if st.button("Ready to ML !"):
             st.balloons()
     except:
-        st.write("Please upload Excel file")
+        st.info("Please upload Excel file")
     st.sidebar.header("Data Cake")
 
 
