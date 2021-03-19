@@ -6,5 +6,5 @@ seaborn==0.10.1
 streamlit==0.61.0
 xlrd==1.2.0
 XlsxWriter==1.2.6
-pickle
-sklearn
+pickleshare==0.7.5
+scikit-learn @ file:///D:/bld/scikit-learn_1611079929791/work
