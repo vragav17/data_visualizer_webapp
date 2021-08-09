@@ -2,3 +2,4 @@ pickleshare==0.7.5
 scikit-learn==0.24.1
 joblib
 gunicorn
+streamlit
