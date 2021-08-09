@@ -1,19 +1,16 @@
 import joblib
-import seaborn as sns
+
 import os
 import streamlit as st
 
 # EDA Pkgs
-import pandas as pd
-import numpy as np
+
 
 # ML Pkgs
 
 
 # Viz Pkgs
-import matplotlib.pyplot as plt
-import matplotlib
-matplotlib.use('Agg')
+
 
 # loading in the model to predict on the data
 classifier = joblib.load('Thermal_Coefficent_Model.pkl')
