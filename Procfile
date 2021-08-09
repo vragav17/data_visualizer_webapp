@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run Ms_Temp.py
+web: sh setup.sh && streamlit run TE_App.py
