@@ -30,9 +30,9 @@ def TE_Predictor_app():
     prepared by Prof. G Phanikumar Group
      """
     st.markdown(html, unsafe_allow_html=True)
-    st.title("Thermal Expanision Cofficent Predictor")
+    st.title("Thermal Expansion Cofficent Predictor")
     st.subheader(
-        "Predicts the Thermal Expanision Cofficent for given Composition")
+        "Predicts the Thermal Expansion Cofficent for given Composition")
 
     import joblib
     # loading in the model to predict on the data
