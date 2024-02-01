@@ -1,5 +1,5 @@
 pickleshare==0.7.5
-scikit-learn==0.24.1
+scikit-learn==1.0.1
 joblib
 gunicorn
 streamlit
